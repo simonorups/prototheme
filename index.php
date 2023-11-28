@@ -45,14 +45,15 @@
         <?php //require_once ("pricing.php"); ?>
         <!-- End Pricing Section -->
 
-        <!-- ======= Testimonials Section ======= -->
-        <?php require_once("testimonials.php"); ?>
-        <!-- End Testimonials Section -->
-
+        
         <!-- ======= Blog Section ======= -->
         <?php require_once("blog.php"); ?>
         <!-- End Blog Section -->
-
+        
+        <!-- ======= Testimonials Section ======= -->
+        <?php require_once("testimonials.php"); ?>
+        <!-- End Testimonials Section -->
+        
         <!-- ======= Suscribe Section ======= -->
         <?php //require_once ("subscribe.php"); ?>
         <!-- End Suscribe Section -->

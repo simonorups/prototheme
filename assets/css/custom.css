@@ -98,6 +98,17 @@ form #explore {
 .rounded{
     border-radius: 10px !important;
 }
+.area-padding {
+    padding: 30px 0px 50px;
+}
+.services-icon {
+    color: #2866e1;
+}
+.single-services>h4 {
+    color: #444;
+    font-size: 18px;
+    font-weight: 700;
+}
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1786px;
