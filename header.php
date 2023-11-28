@@ -39,7 +39,7 @@
       </nav>
       <!-- .navbar -->
 
-      <button type="button" class="btn btn-primary btn-sm rounded-pill px-4" id="login">Login</button>
+      <button type="button" class="btn btn-primary btn-sm rounded-pill px-4" id="login" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
 
     </div>
   </header>

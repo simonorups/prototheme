@@ -15,6 +15,10 @@
     <?php require_once("hero-slider.php"); ?>
     <!-- End Hero Section -->
 
+    <!-- ======= modal Section ======= -->
+    <?php require_once("modal.php"); ?>
+    <!-- End modal Section -->
+
     <main id="main">
 
         <!-- ======= Explore Now ======= -->
