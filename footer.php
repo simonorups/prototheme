@@ -69,14 +69,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5 col-sm-12 col-xs-12">
-                    <div class="copyright text-center">
+                    <div class="copyright py-md-2">
                         <p>
                             <strong>Copyright &copy; 2021 Proto Web Site Test. All Rights Reserved</strong>
                         </p>
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-12 col-xs-12">
-                    <nav id="navbar" class="navbar">
+                    <nav id="navbar2" class="navbar">
                         <ul>
                             <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                             <li><a class="nav-link scrollto" href="#about">About</a></li>
@@ -88,7 +88,7 @@
                     <!-- .navbar -->
                 </div>
                 <div class="col-md-2 col-sm-12 col-xs-12">
-                    <div class="footer-icons">
+                    <div class="footer-icons mt-0 float-end">
                         <ul>
                             <li>
                                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>

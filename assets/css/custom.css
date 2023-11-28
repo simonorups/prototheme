@@ -20,7 +20,7 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-#header, #hero, #main, #footer {
+#header, #hero, #main, footer {
     width: 90%;
     max-width: 1786px;
     margin-left: auto;
@@ -52,6 +52,9 @@ body {
     content: "";
     background-color: rgba(0, 0, 0, 0.3);
 }
+.footer-icons {
+    margin-top: 0;
+}
 .footer-icons ul li a{
     color: #fff;
 }
@@ -63,6 +66,16 @@ body {
 }
 .footer-icons .instagram {
     background: rebeccapurple;
+}
+.footer-area-bottom {
+    background: #d9e4f1 none repeat scroll 0 0;
+    padding: 15px 0;
+}
+#navbar2 a, #navbar2 a:focus {
+    font-weight: normal;
+    color: #807f7d;
+    color: rgb(137 135 131);
+    padding: 10px 20px 10px 20px;
 }
 .bold, .label{
     font-weight: 700;
@@ -81,6 +94,9 @@ form #explore {
     height: -webkit-fill-available;
     height: fill-available;
     text-transform: uppercase;
+}
+.rounded{
+    border-radius: 10px !important;
 }
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl {
