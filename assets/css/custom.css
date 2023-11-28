@@ -1,5 +1,6 @@
 #header {
     background: #fff;
+    height: 50px;
 }
 body {
     font-family: "Montserrat", sans-serif;
@@ -28,7 +29,7 @@ body {
 #hero {
     background: transparent;
     height:70vh;
-    margin-top: 85px;
+    margin-top: 65px;
     border-radius: 10px;
 }
 #hero h2 {
@@ -36,7 +37,7 @@ body {
     text-transform: uppercase;
 }
 #hero p {
-    width: 30%;
+    width: 35%;
     font-size: inherit;
     line-height: 2;
     font-weight: normal;
@@ -49,7 +50,22 @@ body {
 }
 #hero .carousel-item::before {
     content: "";
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.footer-icons ul li a{
+    color: #fff;
+}
+.footer-icons .facebook {
+    background: dodgerblue;
+}
+.footer-icons .linkedin {
+    background: darkblue;
+}
+.footer-icons .instagram {
+    background: rebeccapurple;
+}
+.bold, .label{
+    font-weight: 700;
 }
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl {
