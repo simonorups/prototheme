@@ -19,8 +19,31 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-@media (min-width: 1200px){
-.container, .container-lg, .container-md, .container-sm, .container-xl {
+#header, #hero, #main, #footer {
+    width: 90%;
     max-width: 1786px;
+    margin-left: auto;
+    margin-right: auto;
 }
+#hero {
+    background: transparent;
+    height:70vh;
+    margin-top: 85px;
+    border-radius: 10px;
+}
+#hero h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+#hero p {
+    width: 30%;
+    font-size: inherit;
+    line-height: 2;
+    font-weight: normal;
+    
+}
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1786px;
+    }
 }
