@@ -12,7 +12,7 @@
             <input type="email" class="form-control border border-1" id="email" required>
           </div>
           <div class="mb-3">
-            <label for="password" class="col-form-label">Message:</label>
+            <label for="password" class="col-form-label">Password:</label>
             <input type="password" class="form-control border border-1" id="password" required>
           </div>
         </form>
