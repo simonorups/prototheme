@@ -1,0 +1,26 @@
+#header {
+    background: #fff;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover>a {
+    color: #aa7005;
+}
+.navbar a, .navbar a:focus {
+    
+    font-weight: 700;
+    color: orange;
+    color: rgb(236 155 5);
+    padding: 10px 30px 10px 30px;
+}
+#login {
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1786px;
+}
+}
