@@ -67,6 +67,19 @@ body {
 .bold, .label{
     font-weight: 700;
 }
+.form-control{
+    border: none;
+}
+.border-right{
+    border-right: 2px solid rgb(63, 63, 62);
+}
+form #explore {
+    height: 100%;
+    height: -moz-available;
+    height: -webkit-fill-available;
+    height: fill-available;
+    text-transform: uppercase;
+}
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1786px;
