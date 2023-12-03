@@ -13,7 +13,6 @@ body {
 
 .navtop,
 footer {
-    position: fixed;
     background-color: #3f69a8;
     height: 60px;
     width: 100%;
@@ -66,7 +65,7 @@ footer div {
 
 .content h2 {
     margin: 0;
-    padding: 25px 0;
+    padding: 2px 0;
     font-size: 22px;
     border-bottom: 1px solid #ebebeb;
     color: #666666;
@@ -195,7 +194,7 @@ footer div {
     margin-right: 25px;
 }
 
-.update form input, select {
+.update form input, select, textarea {
     padding: 10px;
     width: 400px;
     margin-right: 25px;
@@ -258,10 +257,14 @@ footer div {
     border-radius: 5px;
 }
 footer {
+    position: fixed;
     left: 0;
     bottom: 0;
     color: white;
 }
 .w-100{
     width: 100%;
+}
+.update form .entirerow{
+    width: 825px;
 }

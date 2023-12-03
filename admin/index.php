@@ -36,7 +36,8 @@ include 'functions.php';
 				<tr>
 					<td>#</td>
 					<td>Place</td>
-					<td width="30%">Description</td>
+					<td>Image</td>
+					<td width="20%">Description</td>
 					<td>Cost</td>
 					<td>Travel Duration</td>
 					<td>Distance</td>
@@ -53,6 +54,9 @@ include 'functions.php';
 						</td>
 						<td>
 							<?= $contact['place'] ?>
+						</td>
+						<td>
+							<img src="<?= $contact['image_path'] ?>" height="50" />
 						</td>
 						<td>
 							<?= $contact['description'] ?>

@@ -15,17 +15,69 @@ if (!empty($_POST)) {
     $days = isset($_POST['days']) ? $_POST['days'] : '';
     $distance = isset($_POST['distance']) ? $_POST['distance'] : '';
     $status = isset($_POST['status']) ? $_POST['status'] : '';
+
+    /**To be moved to a function**/
+    $target_dir = "uploads/destinations/";
+    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+    echo $target_file;
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+    // Check if image file is a actual image or fake image
+    if (isset($_FILES["image"]["name"])) {
+        $check = getimagesize($_FILES["image"]["tmp_name"]);
+        if ($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
+    }
+
+    // Check if file already exists
+    if (file_exists($target_file)) {
+        echo "Sorry, file already exists.";
+        $uploadOk = 0;
+    }
+
+    // Check file size
+    if ($_FILES["image"]["size"] > 500000) {
+        echo "Sorry, your file is too large.";
+        $uploadOk = 0;
+    }
+
+    // Allow certain file formats
+    if (
+        $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif" && $imageFileType != "webp"
+    ) {
+        echo "Sorry, only JPG, JPEG, PNG, WEBP & GIF files are allowed.";
+        $uploadOk = 0;
+    }
+
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+        echo "Sorry, your file was not uploaded.";
+        // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+            // echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
+        } else {
+            // echo "Sorry, there was an error uploading your file.";
+        }
+    }
     // Insert new record into the travel_destinations table
-    
-    $stmt = $pdo->prepare('INSERT INTO travel_destinations(place, description, cost, travel_days, distance, status) VALUES (?, ?, ?, ?, ?, ?)');
-    $result = $stmt->execute([$place, $description, $cost, $days, $distance, $status]);
+
+    $stmt = $pdo->prepare('INSERT INTO travel_destinations(place, description, image_path, cost, travel_days, distance, status) VALUES (?, ?, ?, ?, ?, ?, ?)');
+    $result = $stmt->execute([$place, $description, $target_file, $cost, $days, $distance, $status]);
     // Output message
     if ($result) {
         $msg = 'Destination Created Successfully!';
         $txtColor = 'success';
     } else {
         // var_dump($stmt->errorInfo()[2]);
-        $msg = 'Destination Not Created! with error >> '.$stmt->errorInfo()[2];
+        $msg = 'Destination Not Created! with error >> ' . $stmt->errorInfo()[2];
         $txtColor = 'danger';
     }
 }
@@ -37,15 +89,21 @@ if (!empty($_POST)) {
 <div class="content update">
     <h2>Create Contact</h2>
     <?php if ($msg): ?>
-        <p class="bg-<?=$txtColor?>">
+        <p class="bg-<?= $txtColor ?>">
             <?= $msg ?>
         </p>
     <?php endif; ?>
-    <form action="create.php" method="post">
+    <form action="create.php" method="post" enctype="multipart/form-data">
         <label for="place">Place</label>
-        <label for="name">Description</label>
+        <label for="image">Image</label>
+        
         <input type="text" name="place" placeholder="Hong Kong" id="place" required>
-        <input type="text" name="description" placeholder="Some place in china" id="name" required>
+        <input type="file" name="image" id="image" accept="image/*" required>
+                
+        <label for="name">Description</label>
+        <textarea rows="2" cols="40" class="entirerow" name="description" required>Some place in china...</textarea>
+        <!-- <input type="text" name="description" placeholder="Some place in china" id="name" required> -->
+
         <label for="cost">Cost</label>
         <label for="days">Travel Days</label>
         <input type="text" name="cost" placeholder="10000" id="cost" required>
@@ -58,7 +116,7 @@ if (!empty($_POST)) {
             <option value="0">In Active</option>
         </select>
         <div class="w-100">
-            <input type="submit" value="Create">
+            <input type="submit" name="create" value="Create">
         </div>
     </form>
 </div>
