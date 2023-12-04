@@ -38,6 +38,7 @@ include 'functions.php';
 					<td>Place</td>
 					<td>Image</td>
 					<td width="20%">Description</td>
+					<td>Continent</td>
 					<td>Cost</td>
 					<td>Travel Duration</td>
 					<td>Distance</td>
@@ -60,6 +61,9 @@ include 'functions.php';
 						</td>
 						<td>
 							<?= $contact['description'] ?>
+						</td>
+						<td>
+							<?= $contact['continent'] ?>
 						</td>
 						<td>
 							<?= $contact['cost'] ?>

@@ -108,7 +108,7 @@ if (isset($_GET['id'])) {
 <?= template_header('Read') ?>
 
 <div class="content update">
-    <h2>Update destination #
+    <h2>Update Destination #
         <?= $destination['id'] ?>
     </h2>
     <?php if ($msg): ?>
@@ -126,9 +126,7 @@ if (isset($_GET['id'])) {
         <input type="file" name="image" id="image" accept="image/*, .webp" required>
 
         <label for="name">Description</label>
-        <textarea rows="2" cols="40" class="entirerow" name="description" required><?= $destination['description'] ?></textarea>
-
-        
+        <textarea rows="2" cols="40" class="entirerow" name="description" placeholder="Some place in china..." required><?= $destination['description'] ?></textarea>      
         
         
         <label for="cost">Cost</label>

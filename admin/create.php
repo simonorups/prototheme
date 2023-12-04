@@ -11,6 +11,7 @@ if (!empty($_POST)) {
     // Check if POST variable "name" exists, if not default the value to blank, basically the same for all variables
     $place = isset($_POST['place']) ? $_POST['place'] : '';
     $description = isset($_POST['description']) ? $_POST['description'] : '';
+    $continent = isset($_POST['continent']) ? $_POST['continent'] : '';
     $cost = isset($_POST['cost']) ? $_POST['cost'] : '';
     $days = isset($_POST['days']) ? $_POST['days'] : '';
     $distance = isset($_POST['distance']) ? $_POST['distance'] : '';
@@ -69,8 +70,8 @@ if (!empty($_POST)) {
     }
     // Insert new record into the travel_destinations table
 
-    $stmt = $pdo->prepare('INSERT INTO travel_destinations(place, description, image_path, cost, travel_days, distance, status) VALUES (?, ?, ?, ?, ?, ?, ?)');
-    $result = $stmt->execute([$place, $description, $target_file, $cost, $days, $distance, $status]);
+    $stmt = $pdo->prepare('INSERT INTO travel_destinations(place, description, continent, image_path, cost, travel_days, distance, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
+    $result = $stmt->execute([$place, $description, $continent, $target_file, $cost, $days, $distance, $status]);
     // Output message
     if ($result) {
         $msg = 'Destination Created Successfully!';
@@ -87,7 +88,7 @@ if (!empty($_POST)) {
 <?= template_header('Create') ?>
 
 <div class="content update">
-    <h2>Create Contact</h2>
+    <h2>Create Destination</h2>
     <?php if ($msg): ?>
         <p class="bg-<?= $txtColor ?>">
             <?= $msg ?>
@@ -101,7 +102,15 @@ if (!empty($_POST)) {
         <input type="file" name="image" id="image" accept="image/*" required>
                 
         <label for="name">Description</label>
-        <textarea rows="2" cols="40" class="entirerow" name="description" required>Some place in china...</textarea>
+        <label for="image">Continent</label>
+        <textarea rows="2" cols="40" class="" name="description" placeholder="Some place in china..." required></textarea>
+        <select name="continent" required id="continent">
+            <option value="">--Select-</option>
+            <option value="Asia">Asia</option>
+            <option value="Africa">Africa</option>
+            <option value="Europa">Europa</option>
+            <option value="America">America</option>
+        </select>
         <!-- <input type="text" name="description" placeholder="Some place in china" id="name" required> -->
 
         <label for="cost">Cost</label>

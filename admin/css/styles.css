@@ -202,6 +202,10 @@ footer div {
     border: 1px solid #cccccc;
 }
 
+select{
+    height: fit-content;
+}
+
 .update form input[type="submit"] {
     display: block;
     background-color: #38b673;
