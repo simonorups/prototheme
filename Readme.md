@@ -4,8 +4,9 @@ NOTE: Before following these steps, ensure your server is running with Apache se
 1. Open your CMD/Terminal
 2. Go to your root server location. Eg C:xampp/htdocs/ or C:wamp/www/
 3. From that location Git clone ```https://github.com/simonorups/prototheme.git```
-4. Go to your browser and run ```http:localhost/prototheme/```
-5. To access the admin side to add destinations, login using the top right login button.
+4. Go to ```http:localhost/phpmyadmin/``` and Import database from ```database/``` folder in the root of the project
+5. Go to your browser and run ```http:localhost/prototheme/```
+6. To access the admin side to add destinations, login using the top right login button.
 below are the credentials:
 
 ```
