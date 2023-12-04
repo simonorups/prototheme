@@ -8,25 +8,22 @@
       </div>
     </div>
 
-    <p>
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2"
-        aria-expanded="false" aria-controls="multiCollapseExample2">Asia</button>
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse"
-        aria-expanded="false" aria-controls="multiCollapseExample1">Europa</button>
+    <p class="row-flex justify-content-md-center">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#destinations"
+        aria-expanded="false" aria-controls="destinations">Asia</button>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#destinations"
+        aria-expanded="false" aria-controls="destinations">Europa</button>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#destinations"
+        aria-expanded="false" aria-controls="destinations">Asia</button>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#destinations"
+        aria-expanded="false" aria-controls="destinations">Europa</button>
     </p>
+
     <div class="row">
       <div class="col">
-        <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="collapse" id="destinations">
           <div class="card card-body">
-            Some placeholder content for the first collapse component of this multi-collapse example. This panel is
-            hidden by default but revealed when the user activates the relevant trigger.
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="collapse multi-collapse" id="multiCollapseExample2">
-          <div class="card card-body">
-            Some placeholder content for the second collapse component of this multi-collapse example. This panel is
+            Some placeholder content for the first collapse component of this  example. This panel is
             hidden by default but revealed when the user activates the relevant trigger.
           </div>
         </div>
